@@ -22,66 +22,78 @@ export function getCard() {
     /**
      * Get answer card name
      */
+    return getCardNode().alt;
 }
+
 
 export function getCardNode() {
     /**
      * Get answer card image node
      */
+    return document.querySelector('.answer img');
 }
 
 export function getCheckbox() {
     /**
      * Get checkbox node
      */
+    return document.querySelector('checkbox');
 }
 
 export function getContinueBtn() {
     /**
      * Get 'continue/try again' button node
      */
+    return document.querySelector('#continue');
 }
 
 export function getNumberInput() {
     /**
      * Get number input node
      */
+    return document.querySelector('input[type="number"]');
 }
 
 export function getOutput() {
     /**
      * Get output node
      */
+    return document.querySelector('output');
 }
 
 export function getPanel() {
     /**
      * Get card selection panel node
      */
+    return document.querySelector('main > div:last-child');
 }
 
 export function getTiles() {
     /**
      * Get the card tiles
      */
+    return document.querySelectorAll('.tiles input');
 }
 
 export function getTries() {
     /**
      * Get the current value of tries
      */
+    return getNumberInput().value;
 }
 
 export function getRestartBtn() {
     /**
      * Get 'restart' button node
      */
+    return document.querySelector('#restart');
 }
 
 export function getShowBtn() {
     /**
      * Get 'show' button node
      */
+    return document.querySelector('#show-btn');
 }
 
 export function setCard() {
@@ -101,7 +113,8 @@ export function setCard() {
         'king of diamonds', 
         'queen of spades'
     ];
-
+    const idx = Math.floor(Math.random() * 9)
+    
     // hide the card
 
      // cancel the animation
